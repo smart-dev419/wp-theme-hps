@@ -1,0 +1,51 @@
+.events-block {
+  @include bordered;
+  padding: 80px 0 62px;
+  position: relative;
+  color: $white;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<desktop') {
+    font-size: 20px;
+  }
+
+  @include media('<tablet') {
+    font-size: 16px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($black, 0.4);
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 52px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .event-row {
+    margin-bottom: 32px;
+
+    .title {
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .btn-wrap {
+    margin-top: 65px;
+  }
+}

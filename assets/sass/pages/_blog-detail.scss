@@ -1,0 +1,162 @@
+.article-block {
+  padding-top: 136px;
+  padding-bottom: 144px;
+  font-size: 22px;
+  line-height: 1.4545;
+  letter-spacing: 0.2px;
+
+  @include media('<desktop') {
+    padding-top: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 20px;
+  }
+
+  @include media('<tablet') {
+    font-size: 16px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .frame {
+    padding: 0 44px;
+
+    @include media('<desktop') {
+      padding: 0 20px;
+    }
+
+    @include media('<tablet') {
+      padding: 0;
+    }
+  }
+
+  .article {
+    margin-bottom: 118px;
+
+    @include media('<desktop') {
+      margin-bottom: 50px;
+    }
+
+    @include media('<tablet') {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+  }
+
+  blockquote {
+    padding: 51px 0 60px 94px;
+    border-left: 6px solid $anzac;
+    margin: -25px 0 10px;
+
+    @include media('<desktop') {
+      padding: 40px 0 40px 60px;
+    }
+
+    @include media('<tablet') {
+      padding: 20px 0 20px 30px;
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .tags {
+    @extend %clearfix;
+    @extend %listreset;
+    margin: 0 0 106px;
+    letter-spacing: 0;
+    text-align: center;
+    letter-spacing: -5px;
+
+    @include media('<desktop') {
+      margin-bottom: 50px;
+    }
+
+    @include media('<tablet') {
+      max-width: 500px;
+      margin: 0 auto 50px;
+    }
+
+    li {
+      letter-spacing: 0;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 6px 12px;
+    }
+
+    a {
+      display: block;
+      background: $madison;
+      min-width: 160px;
+      font: 14px/16px $base-font-sans-serif;
+      color: $white;
+      border-radius: 30px;
+      text-align: center;
+      padding: 11px;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      @include media('<phone') {
+        min-width: 132px;
+      }
+
+      &:hover {
+        background: lighten($madison, 10%);
+      }
+    }
+  }
+
+  .links {
+    @extend %listreset;
+    letter-spacing: -5px;
+    text-align: center;
+    position: relative;
+
+    @include media('<phone') {
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: 0;
+      margin: 0 25px 12px;
+
+      @include media('<tablet') {
+        margin: 0 16px 12px;
+      }
+
+      a {
+        display: block;
+        width: 71px;
+        height: 71px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &.print {
+          background: url(../../images/ico-printer.png) no-repeat;
+        }
+
+        &.message {
+          background: url(../../images/ico-message.png) no-repeat;
+        }
+
+        &.facebook {
+          background: url(../../images/ico-facebook.png) no-repeat;
+        }
+
+        &.twitter {
+          background: url(../../images/ico-twitter.png) no-repeat;
+        }
+      }
+    }
+  }
+}

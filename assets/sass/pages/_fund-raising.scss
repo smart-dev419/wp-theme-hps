@@ -1,0 +1,73 @@
+.fund-raising-event {
+  padding: 98px 0 46px;
+
+  @include media('<desktop') {
+    padding: 50px 0 20px;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0 10px;
+  }
+
+  .two-cols-wrap {
+    text-align: center;
+    letter-spacing: -5px;
+
+    .frame {
+      padding: 0 30px;
+
+      @include media('<desktop') {
+        padding: 0;
+      }
+    }
+
+    [class*="col-"] {
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+      letter-spacing: 0;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+
+      @include media('<tablet') {
+        margin-bottom: 20px;
+      }
+
+      &:after {
+        @include line;
+        width: 65px;
+      }
+    }
+
+    p {
+      margin-bottom: 28px;
+    }
+  }
+
+  .top-block {
+    margin-bottom: 73px;
+
+    @include media('<tablet') {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      padding-bottom: 35px;
+      margin-bottom: 58px;
+
+      @include media('<tablet') {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.btn-wrap {
+  text-align: center;
+}

@@ -1,0 +1,52 @@
+{
+    "key": "group_584d99e07cd63",
+    "title": "Search Results Teaser",
+    "fields": [
+        {
+            "key": "field_584d9accc602e",
+            "label": "Search Results Teaser Text",
+            "name": "search_results_teaser_text",
+            "type": "wysiwyg",
+            "instructions": "This is the teaser text that will appear on the search results page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "alumni"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "job"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "faq"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1481483769
+}

@@ -1,0 +1,258 @@
+{
+    "key": "group_6c9d79a76a1fa",
+    "title": "Hours / Schedule Fields",
+    "fields": [
+        {
+            "key": "field_57a3f7fe6d101",
+            "label": "Schedules",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_57a3f7fe6d102",
+            "label": "Schedules",
+            "name": "schedules",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+               "width": "",
+               "class": "",
+               "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Schedule",
+            "sub_fields": [
+               {
+                   "key": "field_57a3f7fe6d103",
+                   "label": "Topic",
+                   "name": "topic",
+                   "type": "text",
+                   "instructions": "",
+                   "required": 0,
+                   "conditional_logic": 0,
+                   "wrapper": {
+                       "width": 50,
+                       "class": "",
+                       "id": ""
+                   },
+                   "default_value": "",
+                   "placeholder": "",
+                   "prepend": "",
+                   "append": "",
+                   "maxlength": "",
+                   "readonly": 0,
+                   "disabled": 0
+               },
+               {
+
+                    "key": "field_57a3f7fe6d104",
+                    "label": "Times",
+                    "name": "times",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                       "width": 50,
+                       "class": "",
+                       "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": "",
+                    "layout": "block",
+                    "button_label": "Add Time",
+                    "sub_fields": [
+                       {
+                           "key": "field_57a3f7fe6d105",
+                           "label": "Time",
+                           "name": "time",
+                           "type": "text",
+                           "instructions": "",
+                           "required": 0,
+                           "conditional_logic": 0,
+                           "wrapper": {
+                               "width": "",
+                               "class": "",
+                               "id": ""
+                           },
+                           "default_value": "",
+                           "placeholder": "",
+                           "prepend": "",
+                           "append": "",
+                           "maxlength": "",
+                           "readonly": 0,
+                           "disabled": 0
+                       }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_57a3f7fe6d106",
+            "label": "Photos",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_57a3f7fe6d107",
+            "label": "Photo Gallery",
+            "name": "photo_gallery",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_57a3f7fe6d108",
+            "label": "Activities",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_57a3f7fe6d109",
+            "label": "Activities",
+            "name": "activities",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+               "width": "",
+               "class": "",
+               "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Activity",
+            "sub_fields": [
+               {
+                   "key": "field_57a3f7fe6d110",
+                   "label": "Title",
+                   "name": "title",
+                   "type": "text",
+                   "instructions": "",
+                   "required": 0,
+                   "conditional_logic": 0,
+                   "wrapper": {
+                       "width": 20,
+                       "class": "",
+                       "id": ""
+                   },
+                   "default_value": "",
+                   "placeholder": "",
+                   "prepend": "",
+                   "append": "",
+                   "maxlength": "",
+                   "readonly": 0,
+                   "disabled": 0
+               },
+               {
+                   "key": "field_57a3f7fe6d111",
+                   "label": "Description",
+                   "name": "description",
+                   "type": "textarea",
+                   "instructions": "",
+                   "required": 0,
+                   "conditional_logic": 0,
+                   "wrapper": {
+                       "width": 80,
+                       "class": "",
+                       "id": ""
+                   },
+                   "default_value": "",
+                   "placeholder": "",
+                   "maxlength": "",
+                   "rows": "",
+                   "new_lines": "br",
+                   "readonly": 0,
+                   "disabled": 0
+               }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "views\/hours-schedule-page.blade.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": ""
+}

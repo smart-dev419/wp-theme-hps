@@ -1,0 +1,338 @@
+.philosophy-panel {
+  padding: 102px 0 72px;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<widescreen') {
+    padding: 80px 0;
+    font-size: 20px;
+  }
+
+  @include media('<desktop') {
+    font-size: 16px;
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    font-size: 16px;
+    padding: 30px 0;
+  }
+
+  .columns-holder {
+    letter-spacing: -6px;
+
+    [class*="col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: 0;
+
+      @include media('<tablet') {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    position: relative;
+    padding-bottom: 45px;
+    margin-bottom: 60px;
+
+    @include media('<widescreen') {
+      font-size: 34px;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+
+    @include media('<desktop') {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    &:before {
+      @include line;
+      width: 100px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .learn {
+    font-size: 20px;
+    line-height: 1.4545;
+
+    @include media('<widescreen') {
+      font-size: 16px;
+    }
+  }
+}
+
+.think-with-block {
+  @include bordered;
+  background: #062555;
+  padding: 100px 0;
+  text-align: center;
+  color: $white;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  .top-block {
+
+    h2 {
+      color: $anzac;
+    }
+  }
+}
+
+.carousel {
+  letter-spacing: -5px;
+  margin: 0 -15px;
+  padding-top: 72px;
+  position: relative;
+
+  @include media('<tablet') {
+    padding-top: 36px;
+    margin-top: 50px;
+  }
+
+  .slide {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.33%;
+    letter-spacing: 0;
+    padding: 0 15px;
+  }
+
+  .title {
+    display: block;
+    font: 700 22px/1.4545 $base-font-sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 38px;
+    margin-bottom: 24px;
+
+    @include media('<desktop') {
+      font-size: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.description-list-block {
+  @include bordered;
+  padding: 100px 0;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  .top-block {
+    margin-bottom: 50px;
+
+    @include media('<tablet') {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    color: $abbey;
+  }
+
+  .text-container {
+    text-align: center;
+    margin: 0 0 50px;
+    font-size: 18px;
+    line-height: 1.556;
+
+    @include media('<desktop') {
+      font-size: 16px;
+    }
+
+    p {
+      margin-bottom: 27px;
+    }
+  }
+
+  .columns-holder {
+    letter-spacing: -5px;
+    text-align: center;
+
+    [class*="col-"] {
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: 0;
+
+      @include media('<tablet') {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+
+    .img-wrap {
+      display: inline-block;
+      vertical-align: top;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: $abbey;
+      position: relative;
+      margin-bottom: 32px;
+
+      @include media('<desktop') {
+        margin-bottom: 20px;
+      }
+
+      .img-frame {
+        @include vertical-align-y;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+    }
+
+    .title {
+      display: block;
+      font: bold 22px/1.0909 $base-font-sans-serif;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 39px;
+      margin-bottom: 28px;
+
+      @include media('<desktop') {
+        font-size: 16px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      &:before {
+        @include line;
+        width: 64px;
+        height: 3px;
+      }
+    }
+
+    .text-wrap {
+      padding: 0 20px;
+    }
+  }
+}
+
+.list-container {
+  letter-spacing: -5px;
+
+  [class*="col-"] {
+    margin-bottom: 88px;
+    text-align: center;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0;
+
+    @include media('<xl-widescreen') {
+      margin-bottom: 50px;
+    }
+
+    @include media('<tablet') {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .img-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: $abbey;
+    position: relative;
+    margin-bottom: 32px;
+
+    @include media('<desktop') {
+      margin-bottom: 20px;
+    }
+
+    .img-frame {
+      @include vertical-align-y;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  .title {
+    display: block;
+    font: bold 22px/1.0909 $base-font-sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 43px;
+    margin-bottom: 23px;
+
+    @include media('<desktop') {
+      font-size: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      @include line;
+      width: 64px;
+      height: 3px;
+    }
+  }
+
+  .learn {
+    font-size: 16px;
+  }
+}
+
+.live-with-block {
+  @include bordered;
+  background: $madison;
+  color: $white;
+  padding: 88px 0 148px;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  h2 {
+    color: $anzac;
+  }
+}

@@ -1,0 +1,297 @@
+.athletics-block {
+  padding: 116px 0 146px;
+  text-align: center;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  .text-row {
+    margin-bottom: 76px;
+    font-size: 22px;
+    line-height: 1.4545;
+
+    @include media('<desktop') {
+      margin-bottom: 50px;
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+
+    h2 {
+      padding-bottom: 58px;
+      margin-bottom: 63px;
+      position: relative;
+
+      @include media('<desktop') {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+
+      @include media('<tablet') {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      &:before {
+        @include line;
+      }
+    }
+  }
+
+  .team-block {
+
+    h2 {
+      padding-bottom: 58px;
+      margin-bottom: 85px;
+      position: relative;
+
+      @include media('<desktop') {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+
+      @include media('<tablet') {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      &:before {
+        @include line;
+      }
+    }
+
+    h4 {
+      position: relative;
+      padding-bottom: 28px;
+      margin-bottom: 58px;
+
+      @include media('<desktop') {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+      }
+
+      &:before {
+        @include line;
+        width: 65px;
+      }
+    }
+
+    .row {
+     // display: flex;
+     // flex-wrap: wrap;
+     // letter-spacing: -5px;
+
+      @include media('<tablet') {
+        display: block;
+        margin: 0;
+      }
+
+      [class*="col-"] {
+        //float: none;
+        //display: inline-block;
+        //vertical-align: top;
+        //letter-spacing: 0;
+        position: relative;
+        padding-top: 18px;
+
+        @include media('<widescreen') {
+          width: 33.2%;
+        }
+
+        @include media('<tablet') {
+          display: block;
+          width: 100%;
+        }
+
+        + [class*="col-"] {
+
+          @include media('<tablet') {
+            border-top: 2px solid $anzac;
+            margin-top: 25px;
+          }
+        }
+      }
+
+      .center-col {
+
+        &:before,
+        &:after {
+          content: "";
+          background: $anzac;
+          width: 2px;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          left: 87px;
+
+          @include media('<widescreen') {
+            left: 0;
+          }
+
+          @include media('<tablet') {
+            content: none;
+          }
+        }
+
+        &:after {
+          left: auto;
+          right: 87px;
+
+          @include media('<widescreen') {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+    }
+
+    ul {
+      @extend %listreset;
+    }
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
+}
+
+.lower-school-activity {
+  @include bordered;
+  background: $madison;
+  color: $white;
+  padding: 118px 0 160px;
+  color: #686864;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  .top-block {
+    margin-bottom: 51px;
+    color: $white;
+
+    h2 {
+      color: $white;
+      padding-bottom: 58px;
+      margin-bottom: 63px;
+
+      @include media('<desktop') {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  h2 {
+    color: #686864;
+  }
+}
+
+.club-offering-block {
+  text-align: center;
+  color: $white;
+
+  .club-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media('<tablet') {
+      margin: 0;
+    }
+
+    .content-holder {
+      padding: 0 30px;
+
+      @include media('<tablet') {
+        padding: 0;
+      }
+    }
+
+    [class*="col"] {
+      width: 49.9%;
+
+      @include media('<tablet') {
+        width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    color: $white;
+    padding-bottom: 53px;
+    margin-bottom: 86px;
+    position: relative;
+
+    @include media('<desktop') {
+      padding-bottom: 50px;
+      margin-bottom: 60px;
+    }
+
+    @include media('<tablet') {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  h4 {
+    color: $white;
+    position: relative;
+    padding-bottom: 28px;
+    margin-bottom: 59px;
+
+    @include media('<desktop') {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+
+    &:before {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  .row {
+    letter-spacing: -5px;
+
+    [class*="col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: 0;
+      border: solid $anzac;
+      border-width: 0 0 0 2px;
+      padding-top: 15px;
+
+      @include media('<tablet') {
+        border-width: 2px 0 0;
+        margin-top: 25px;
+      }
+
+      &:first-child {
+        border: none;
+
+        @include media('<tablet') {
+          margin-top: 0;
+        }
+      }
+
+      &:nth-child(2n+1) {
+
+        @include media('>=tablet') {
+          border: none;
+        }
+      }
+    }
+  }
+
+  ul {
+    @extend %listreset;
+  }
+}

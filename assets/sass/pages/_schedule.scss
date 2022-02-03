@@ -1,0 +1,177 @@
+.schedule-block {
+  padding-top: 102px;
+
+  @include media('<desktop') {
+    padding-top: 50px;
+  }
+
+  @include media('<tablet') {
+    padding-top: 30px;
+  }
+
+  .top-block {
+
+    h2 {
+      color: $abbey;
+    }
+  }
+
+  .schedule-lsit {
+    @extend %listreset;
+    margin-bottom: 136px;
+    font-size: 22px;
+    line-height: 1.4545;
+
+    @include media('<desktop') {
+      font-size: 17px;
+      margin-bottom: 50px;
+    }
+
+    >li {
+      @extend %clearfix;
+      padding: 18px 0;
+      border-bottom: 1px solid $anzac;
+
+      &:first-child {
+        border-top: 1px solid $anzac;
+      }
+    }
+
+    .topic {
+      float: left;
+      width: 60%;
+
+      @include media('<tablet') {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .time-list {
+      @extend %listreset;
+      float: right;
+      width: 40%;
+      text-align: right;
+      padding-right: 12px;
+      letter-spacing: -0.2px;
+
+      @include media('<tablet') {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.gallery-list-style-1 {
+  @include bordered;
+  @extend %clearfix;
+
+  img {
+    width: 100%;
+  }
+
+  .column-sm {
+    float: left;
+    width: 25%;
+
+    @include media('<tablet') {
+      width: 100%;
+    }
+
+    img {
+      @include media('<tablet') {
+        max-width: 50%;
+        float: left;
+      }
+    }
+  }
+
+  .column-lg {
+    float: left;
+    width: 50%;
+
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+}
+
+.activities-block {
+  @include bordered;
+  padding: 134px 0;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<widescreen') {
+    padding: 80px 0;
+  }
+
+  @include media('<desktop') {
+    font-size: 20px;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+    font-size: 17px;
+  }
+
+  h2 {
+    position: relative;
+    padding-bottom: 48px;
+    margin-bottom: 45px;
+
+    @include media('<desktop') {
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    @include media('<tablet') {
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  p {
+    margin-bottom: 32px;
+
+    @include media('<desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  .activity-row {
+
+    + .activity-row {
+      margin-top: 136px;
+
+      @include media('<widescreen') {
+        margin-top: 60px;
+      }
+    }
+
+    br {
+      @include media('<desktop') {
+        display: none;
+      }
+    }
+  }
+
+  .mail {
+    color: $abbey;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,175 @@
+.calendar-block {
+  @include bordered;
+  background: $madison;
+  padding: 124px 0 8px;
+
+  @include media('<desktop') {
+    padding-top: 50px;
+  }
+
+  @include media('<tablet') {
+    padding-top: 30px;
+  }
+
+  h3 {
+    color: $anzac;
+    position: relative;
+    padding-bottom: 27px;
+    margin-bottom: 57px;
+    text-align: center;
+
+    @include media('<tablet') {
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      @include line;
+      width: 65px;
+      height: 3px;
+    }
+  }
+
+  .frame {
+    padding: 0 28px;
+
+    @include media('<tablet') {
+      padding: 0;
+    }
+  }
+
+  .row {
+    letter-spacing: -5px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media('<tablet') {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  [class*="col-"] {
+    display: inline-block;
+    vertical-align: top;
+    border: solid $anzac;
+    border-width: 0 0 0 2px;
+    margin-bottom: 132px;
+    letter-spacing: 0;
+
+    @include media('<tablet') {
+      display: block;
+      width: 100%;
+      border-width: 0 0 2px;
+      padding: 0 0 40px;
+      margin-bottom: 40px;
+    }
+
+    &:first-child {
+      border: none;
+    }
+
+    &:nth-child(3n+1) {
+
+      @include media('>=desktop') {
+        border: none;
+      }
+    }
+
+    &:nth-child(2n+1) {
+
+      @include media('<desktop') {
+        border: none;
+      }
+
+      @include media('<tablet') {
+        border-bottom: 2px solid $anzac;
+      }
+    }
+  }
+
+  .list {
+    @extend %listreset;
+    text-align: left;
+    letter-spacing: -5px;
+    margin-top: -9px;
+
+    li {
+      border-bottom: 2px solid $anzac;
+      padding-bottom: 11px;
+      margin-bottom: 9px;
+
+      @include media('<desktop') {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        @include media('<tablet') {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+
+      a {
+        color: $white;
+        display: inline-block;
+        vertical-align: top;
+
+        @include media('<tablet') {
+          display: block;
+        }
+
+        &:hover {
+          color: $saffron;
+        }
+      }
+    }
+
+    time {
+      display: inline-block;
+      vertical-align: middle;
+      width: 44px;
+      margin-right: 30px;
+      text-align: center;
+      line-height: 1;
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $tana;
+      letter-spacing: 0;
+
+      @include media('<widescreen') {
+        margin-right: 14px;
+      }
+
+      @include media('<desktop') {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .month {
+        display: block;
+        font: 700 20px/1 $base-font-sans-serif;
+      }
+
+      .num {
+        display: block;
+        margin-top: -9px;
+      }
+    }
+
+    .txt {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 79.7%;
+      letter-spacing: 0;
+
+      @include media('<desktop') {
+        display: block;
+        max-width: none;
+      }
+    }
+  }
+}

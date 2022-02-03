@@ -1,0 +1,16 @@
+.core-value-block {
+  padding-bottom: 90px;
+
+  @include media('<desktop') {
+    padding-bottom: 50px;
+  }
+
+  @include media('<tablet') {
+    padding-bottom: 30px;
+  }
+
+  .intro-area {
+    padding-bottom: 23px;
+    border: none;
+  }
+}

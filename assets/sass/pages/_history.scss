@@ -1,0 +1,46 @@
+.crest-quadrant-block {
+  padding-top: 20px;
+
+  .logo-wrap {
+    text-align: center;
+    margin-top: 12px;
+
+    @include media('<desktop') {
+      max-width: 400px;
+      margin: 0 auto 80px;
+    }
+  }
+
+  .quadrant-block {
+    letter-spacing: -5px;
+
+    [class*="col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      letter-spacing: 0;
+      margin-bottom: 70px;
+
+      @include media('<tablet') {
+        margin-bottom: 30px;
+      }
+    }
+
+    h4 {
+      position: relative;
+      padding-bottom: 35px;
+      margin-bottom: 24px;
+
+      @include media('<tablet') {
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+      }
+
+      &:before {
+        @include line;
+        width: 65px;
+      }
+    }
+  }
+}

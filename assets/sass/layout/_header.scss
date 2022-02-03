@@ -1,0 +1,751 @@
+#header {
+  background: rgba($saffron, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($black, 0.1);
+  }
+
+  &:after {
+    content: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: -9999px;
+    position: absolute;
+    z-index: -1;
+    // transition: background 0.3s linear;
+
+    .nav-active & {
+
+      @include media('<desktop') {
+        content: "";
+        background: rgba($madison, 0.7);
+      }
+    }
+  }
+
+  &.fixed-position {
+
+    ~ .search-block .search-opener.close {
+      top: 45px;
+    }
+  }
+
+  > .container {
+    position: relative;
+    padding-left: 355px;
+    // transition: padding 0.3s linear;
+
+    @include media('<xl-widescreen') {
+      padding-left: 250px;
+    }
+
+    @include media('<widescreen') {
+      padding-left: 220px;
+    }
+
+    @include media('<desktop') {
+      padding: 0;
+      min-height: 100px;
+      // transition: min-height 0.3s linear;
+    }
+
+    @include media('<tablet') {
+      min-height: 60px;
+    }
+  }
+}
+
+.logo {
+  // @extend %transition;
+  top: 0;
+  left: 15px;
+  position: absolute;
+  width: 204px;
+
+  @include media('<xl-widescreen') {
+    width: 160px;
+  }
+
+  @include media('<widescreen') {
+    width: 108px;
+  }
+
+  @include media('<desktop') {
+    width: 100px;
+    margin-top: 0;
+  }
+
+  @include media('<tablet') {
+    width: 60px;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+    width: 203px;
+    height: 188px;
+    background: #e8cc51;
+    margin: 0 auto;
+    transition: all 0.1s linear;
+
+    @include media('<xl-widescreen') {
+      width: 159px;
+      height: 159px;
+    }
+
+    @include media('<widescreen') {
+      width: 100px;
+      height: 100px;
+      margin: 0;
+    }
+
+    @include media('<desktop') {
+      width: 100px;
+      height: 100px;
+      margin-top: 0;
+    }
+
+    @include media('<tablet') {
+      width: 60px;
+      height: 60px;
+    }
+
+    .fixed-position & {
+      width: 100px;
+      height: 100px;
+
+      @include media('>widescreen') {
+        width: 99px;
+        height: 99px;
+      }
+
+      @include media('<desktop') {
+        width: 100px;
+        height: 100px;
+      }
+
+      @include media('<tablet') {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  .sticky-logo {
+    display: none;
+
+    .fixed-position & {
+      display: block;
+    }
+
+    @include media('<widescreen') {
+      display: block;
+    }
+  }
+
+  .display-logo {
+
+    .fixed-position & {
+      display: none;
+    }
+
+    @include media('<widescreen') {
+      display: none;
+    }
+  }
+}
+
+#nav {
+  font: 700 15px/17px $base-font-sans-serif;
+  text-transform: uppercase;
+  padding-top: 85px;
+  transition: padding 0.1s linear, width 0.1s linear;
+
+  @include media('<xl-widescreen') {
+    padding-top: 70px;
+  }
+
+  @include media('<widescreen') {
+    font-size: 13px;
+    line-height: 15px;
+    padding-top: 45px;
+  }
+
+  @include media('<desktop') {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 20px 0;
+    background: #e8cc51;
+    max-height: calc(100vh - 100px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+    overflow: auto;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include media('<tablet') {
+    font-size: 14px;
+    max-height: calc(100vh - 60px);
+  }
+
+  .fixed-position & {
+    max-height: calc(100vh - 60px);
+  }
+
+  .nav-active & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .fixed-position & {
+    padding-top: 44px;
+
+    @include media('<widescreen') {
+      padding-top: 45px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  >ul {
+    @extend %clearfix;
+    @extend %listreset;
+
+    >li {
+      float: left;
+      letter-spacing: 3px;
+      position: relative;
+      margin-right: 38px;
+
+      @include media('<xl-widescreen') {
+        margin-right: 34px;
+      }
+
+      @include media('<widescreen') {
+        margin-right: 25px;
+      }
+
+      @include media('<desktop') {
+        float: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      &.hover {
+
+        >a {
+          color: $saffron;
+
+          @include media('<desktop') {
+            color: $abbey;
+          }
+        }
+
+        .drop-level-1 {
+          opacity: 1;
+          visibility: visible;
+
+          @include media('<desktop') {
+            display: block;
+          }
+        }
+      }
+
+      &.search {
+        margin: 0 0 0 20px;
+        float: right;
+
+        @include media('<desktop') {
+          float: none;
+          margin: 0;
+        }
+      }
+
+      &.active> a {
+        color: $white;
+        @include media('<desktop') {
+          color: $abbey;
+        }
+
+        > span:after {
+          background: $anzac;
+        }
+      }
+
+      &.has-drop-down {
+
+        &.hover {
+
+          > .arrow-mobile {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+
+        > .arrow-mobile {
+
+          @include media('<desktop') {
+            position: absolute;
+            top: 22px;
+            right: 0;
+            text-align: center;
+            transition: none;
+            cursor: pointer;
+            z-index: 1;
+            padding: 5px;
+            width: 50px;
+            transform: translateY(-50%);
+            &:after {
+              content: "\e907";
+              font: 17px/1 "icomoon";
+              color: $white;
+            }
+          }
+        }
+      }
+
+      > a{
+        color: $white;
+        display: block;
+        padding-bottom: 82px;
+        transition: padding 0.1s linear;
+        position: relative;
+
+        @include media('<xl-widescreen') {
+          padding-bottom: 68px;
+        }
+
+        @include media('<widescreen') {
+          padding-bottom: 36px;
+        }
+
+        @include media('<desktop') {
+          padding: 14px 0 14px 20px;
+          color: $biscay;
+          width: calc(100% - 50px);
+        }
+
+        @include media('<tablet') {
+          padding: 12px 0 12px 20px;
+          width: calc(100% - 50px);
+        }
+
+        > span {
+          padding-bottom: 4px;
+          display: block;
+          position: relative;
+
+          @include media('<desktop') {
+            padding-bottom: 0;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: -3px;
+            right: 1px;
+            bottom: 0;
+            height: 2px;
+
+            @include media('<desktop') {
+              content: none;
+            }
+          }
+        }
+
+        .fixed-position &{
+          padding-bottom: 34px;
+
+          @include media('<widescreen') {
+            padding-bottom: 36px;
+          }
+
+          @include media('<desktop') {
+            padding-bottom: 20px;
+          }
+
+          @include media('<tablet') {
+            padding-bottom: 12px;
+          }
+        }
+
+        &:hover{
+          color: $saffron;
+
+          @include media('<desktop') {
+            color: $abbey;
+          }
+        }
+      }
+
+      .icon-search {
+        font-size: 20px;
+        padding-bottom: 0 !important;
+
+        @include media('<desktop') {
+          padding: 14px 20px !important;
+        }
+      }
+
+      &:nth-last-child(2) {
+
+        .drop-level-1 {
+
+          @include media('<xl-widescreen') {
+            left: auto;
+            right: 0;
+            margin: 0 -30px 0 0;
+          }
+
+          @include media('<desktop') {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.drop-level-1 {
+  @extend %listreset;
+  width: 340px;
+  position: absolute;
+  top: 100%;
+  padding: 31px 26px 18px 30px;
+  background: $abbey;
+  border-top: 4px solid $anzac;
+  font-size: 16px;
+  line-height: 1.625;
+  text-transform: uppercase;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+  max-height: calc(100vh - 189px);
+  overflow: auto;
+  margin-left: -30px;
+
+  @include media('<xl-widescreen') {
+    max-height: calc(100vh - 159px);
+  }
+
+  @include media('<widescreen') {
+    font-size: 14px;
+  }
+
+  @include media('<desktop') {
+    max-height: 100%;
+    width: auto;
+    position: static;
+    display: none;
+    padding: 30px;
+    border: none;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  @include media('<tablet') {
+    padding: 20px;
+    padding: 26px 30px 15px;
+    font-size: 12px;
+  }
+
+  .fixed-position & {
+    max-height: calc(100vh - 99px);
+
+    @include media('<desktop') {
+      max-height: 100%;
+    }
+  }
+
+  > li {
+    padding-bottom: 17px;
+
+    @include media('<tablet') {
+      padding-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active> a {
+      color: $saffron;
+    }
+
+    > a {
+      color: $white;
+      font-weight: 700;
+
+      &:hover,
+      &:focus {
+        color: $saffron;
+      }
+    }
+  }
+
+  .drop-level-2 {
+    @extend %listreset;
+    font-weight: 300;
+    padding-left: 22px;
+
+    >li {
+
+      &.active> a {
+        color: $saffron;
+      }
+
+      >a {
+        color: $white;
+        font-weight: 300;
+
+        &:hover,
+        &:focus {
+          color: $saffron;
+        }
+      }
+    }
+  }
+}
+
+.search-block {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba($madison, 0.95);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  display: block !important;
+  transition: opacity 0.3s linear, visibility 0.3s linear, background 0.3s linear;
+
+  .search-active & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .search-container {
+    @include v-align;
+    // max-width: 980px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+    position: relative;
+
+    .holder {
+      width: 100%;
+    }
+
+    .frame {
+      max-width: 950px;
+      margin: 0 auto;
+      text-align: center;
+      color: $white;
+    }
+
+    .title {
+      display: block;
+      font: 700 22px/24px $base-font-sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 54px;
+      letter-spacing: 0.4px;
+
+      @include media('<tablet') {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .search-wrap {
+      position: relative;
+      padding: 0 90px 0 30px;
+      border: solid $anzac;
+      border-width: 0 0 3px;
+
+      @include media('<tablet') {
+        padding: 0 50px 0 20px;
+      }
+
+      input[type="search"] {
+        background: none;
+        width: 100%;
+        padding: 36px 0;
+        height: 96px;
+        text-align: center;
+        font: 22px/24px $base-font-sans-serif;
+        border: none;
+
+        @include media('<tablet') {
+          height: 60px;
+          padding: 20px 0;
+          font-size: 18px;
+          line-height: 20px;
+        }
+      }
+
+      button[type="submit"] {
+        background:none;
+        border: none;
+        @include vertical-align-y;
+        font-size: 28px;
+        line-height: 1;
+        color: $anzac;
+        right: 20px;
+
+        @include media('<tablet') {
+          font-size: 20px;
+          right: 6px;
+        }
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .search-opener.close {
+    text-indent: -9999px;
+    overflow: hidden;
+    position: absolute;
+    right: 25px;
+    top: 86px;
+    width: 18px;
+    height: 18px;
+    color: $white;
+
+    @include media('<xl-widescreen') {
+      right: 24px;
+      top: 73px;
+    }
+
+    @include media('<desktop') {
+      right: 23px;
+      top: 22px;
+    }
+
+    &:hover {
+
+      &:before,
+      &:after {
+        background: $anzac;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      width: 19px;
+      height: 5px;
+      background: $white;
+      position: absolute;
+      right: 0;
+      transform: rotate(45deg);
+      top: 6px;
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav-opener {
+  text-transform: uppercase;
+  text-align: center;
+  width: 30px;
+  height: 20px;
+  color: $white;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform:translateY(-50%);
+  z-index: 9999;
+  float: right;
+  width:34px;
+  height:22px;
+
+  @include media('>=desktop') {
+    display: none;
+  }
+
+  span {
+    @include hide-text;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  // &:hover {
+
+  //   span,
+  //   &:before,
+  //   &:after {
+  //     background: $madison;
+  //   }
+  // }
+
+  .nav-active & {
+    span {
+      background: $white;
+      opacity: 0;
+    }
+
+    &:before,
+    &:after {
+      transform:rotate(45deg);
+      top:50%;
+      left:0;
+      right:0;
+      background: $white;
+    }
+
+    &:after {
+      transform:rotate(-45deg);
+    }
+  }
+
+  span,
+  &:before,
+  &:after {
+    background: $white;
+    border-radius:4px;
+    position:absolute;
+    top:10px;
+    left: 0;
+    right: 0;
+    height:3px;
+    margin-top:-2px;
+    transition:all .3s linear;
+  }
+  &:before,
+  &:after {
+    content:'';
+    top:0;
+  }
+  &:after {
+    top:20px;
+  }
+}

@@ -1,0 +1,15 @@
+.fine-arts-block {
+ padding: 126px 0;
+
+ @include media('<widescreen') {
+  padding: 80px 0;
+ }
+
+  @include media('<desktop') {
+    padding: 50px 0 30px;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0 20px;
+  }
+}

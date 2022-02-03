@@ -1,0 +1,140 @@
+.intro-block {
+  padding: 102px 0 104px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.4545;
+  letter-spacing: 0.2px;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+    font-size: 20px;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+    font-size: 16px;
+  }
+
+
+  h2 {
+    position: relative;
+    padding-bottom: 60px;
+    margin-bottom: 68px;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include media('<tablet') {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
+}
+
+.trivium-panel {
+  @include bordered;
+  background: $madison;
+  padding: 83px 0 91px;
+  color: $white;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  .top-block {
+    margin-bottom: 79px;
+
+    @include media('<desktop') {
+      margin-bottom: 50px;
+    }
+
+    @include media('<tablet') {
+      margin-bottom: 30px;
+    }
+  }
+
+  h2 {
+    color: $anzac;
+  }
+
+  .columns-holder {
+    letter-spacing: -6px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.556;
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+
+    [class*="col-"] {
+      margin-bottom: 40px;
+      text-align: center;
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: 0;
+    }
+
+    .title {
+      display: block;
+      position: relative;
+      text-transform: uppercase;
+      font: 700 22px/1.4545 $base-font-sans-serif;
+      padding-bottom: 38px;
+      margin-bottom: 23px;
+
+      @include media('<tablet') {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      &:before {
+        @include line;
+        width: 65px;
+        height: 2px;
+      }
+    }
+  }
+
+  .text-container {
+    margin-bottom: 75px;
+    text-align: center;
+
+    p {
+      margin-bottom: 28px;
+    }
+  }
+
+  .more-info-block {
+    @extend %listreset;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.6363;
+
+    p {
+      margin-bottom: 34px;
+    }
+
+    li {
+
+      + li {
+        margin-top: 78px;
+      }
+    }
+  }
+}

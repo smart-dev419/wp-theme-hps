@@ -1,0 +1,129 @@
+.commonly-asked-block {
+  @include bordered;
+  background: $madison;
+  padding: 100px 0;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  h2 {
+    color: $anzac;
+    text-align: center;
+    padding-bottom: 47px;
+    margin-bottom: 32px;
+    position: relative;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include media('<tablet') {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  .accordion {
+    @extend %listreset;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.4545;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+
+    >li {
+
+      &:first-child {
+        border-top: 1px solid $anzac;
+      }
+
+      &.active {
+
+        .opener:before {
+          transform: rotate(90deg);
+        }
+      }
+
+      .opener {
+        display: block;
+        color: $tana;
+        padding: 16px 40px 16px 0;
+        border-bottom: 1px solid $anzac;
+        position: relative;
+        text-decoration: none;
+
+        @include media('<tablet') {
+          padding-right: 20px;
+        }
+
+        &:before {
+          content: "\e908";
+          position: absolute;
+          right: 0;
+          top: 19px;
+          font: 22px/1 'icomoon';
+          color: $abbey;
+
+          @include media('<tablet') {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .accordion-content {
+    padding: 16px 0;
+    border-bottom: 1px solid $anzac;
+    color: $white;
+    font-weight: 400;
+
+    p {
+      margin: 0;
+    }
+
+    .list, ul {
+      @extend %listreset;
+      padding-top: 11px;
+
+      li {
+        
+        + li {
+          margin-top: 32px;
+        }
+
+        &:before {
+          content: "";
+          width: 7px;
+          height: 7px;
+          background: $white;
+          border-radius: 50%;
+          display: inline-block;
+          vertical-align: top;
+          margin: 11px 8px 0 0;
+        }
+      }
+    }
+  }
+
+
+  a {
+    color: $white;
+  }
+}

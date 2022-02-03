@@ -1,0 +1,272 @@
+.search-result-block {
+  background: $madison;
+  padding-top: 286px;
+  padding-bottom: 17px;
+  color: $white;
+  font: 300 14px/1.285 $base-font-sans-serif;
+
+  @include media('<desktop') {
+    padding-top: 150px;
+  }
+
+  .title {
+    display: block;
+    font-size: 22px;
+    line-height: 1.4545;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+  }
+
+  .row {
+    min-height: 77px;
+  }
+}
+
+.search-list-container {
+  padding: 67px 0 282px;
+  font: 22px/1.4545 $base-font-sans-serif;
+
+  @include media('<widescreen') {
+    font-size: 20px;
+  }
+
+  @include media('<desktop') {
+    font-size: 16px;
+  }
+
+  @include media('<widescreen') {
+    padding: 50px 0;
+  }
+
+  .search-form {
+    padding: 0 50px 0 68px;
+    margin-bottom: 104px;
+
+    @include media('<widescreen') {
+      padding: 0 40px;
+      margin-bottom: 50px;
+    }
+
+    @include media('<tablet') {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 27px;
+      text-align: center;
+
+      @include media('<desktop') {
+        font-size: 20px;
+      }
+    }
+
+    .input-wrap {
+      border: 2px solid $abbey;
+      position: relative;
+      padding: 10px 60px 10px 20px;
+
+      input[type="search"] {
+        width: 100%;
+        background: none;
+        padding: 0;
+        border: none;
+        height: 30px;
+      }
+
+      button[type="submit"] {
+        @include vertical-align-y;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        background: none;
+        border: none;
+
+        &:hover:before {
+          color: $anzac;
+        }
+
+        &:before {
+          @extend %transition;
+          @include vertical-align-xy;
+          content: "\e904";
+          font: 21px/1 "icomoon";
+        }
+      }
+    }
+  }
+
+  .search-list {
+    @extend %listreset;
+    letter-spacing: 0.5px;
+
+    li {
+      padding-bottom: 16px;
+      margin-bottom: 52px;
+      position: relative;
+
+      @include media('<widescreen') {
+        margin-bottom: 30px;
+      }
+
+      &:before {
+        content: "";
+        background: $anzac;
+        width: 222px;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 605px;
+
+        @include media('<desktop') {
+          width: 400px;
+        }
+
+        @include media('<tablet') {
+          width: 200px;
+        }
+      }
+    }
+
+    .title {
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  }
+
+  .text-holder {
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.4545;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+  }
+}
+
+.pagination-block {
+  @extend %clearfix;
+  letter-spacing: -5px;
+  margin-top: 116px;
+
+  @include media('<desktop') {
+    margin-top: 50px;
+  }
+
+  @include media('<tablet') {
+    margin-top: 30px;
+  }
+
+  .pagination {
+    @extend %clearfix;
+    display: inline-block;
+    vertical-align: middle;
+    @extend %listreset;
+    width: 80%;
+    letter-spacing: 0;
+
+    @include media('<tablet') {
+      display: block;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+      margin-right: 30px;
+      font-size: 22px;
+      line-height: 1;
+
+      @include media('<widescreen') {
+        margin-right: 14px;
+      }
+
+      @include media('<desktop') {
+        margin-right: 2px;
+      }
+
+      &.active {
+
+        a {
+          border-color: $abbey;
+          pointer-events: none;
+        }
+      }
+
+      &.next {
+        @include hide-text;
+
+        a {
+
+          &:before {
+            @include vertical-align-xy;
+            content: ">";
+            text-indent: 0;
+            font-size: 20px;
+          }
+        }
+      }      
+
+      &.prev {
+        @include hide-text;
+
+        a {
+
+          &:before {
+            @include vertical-align-xy;
+            content: "<";
+            text-indent: 0;
+            font-size: 20px;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        width: 70px;
+        height: 65px;
+        text-align: center;
+        padding: 20px 10px 10px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        position: relative;
+
+        &:hover {
+          border-color: $abbey;
+        }
+      }
+    }
+  }
+
+  .counter {
+    letter-spacing: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 22px;
+
+    @include media('<tablet') {
+      padding-right: 0;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+}

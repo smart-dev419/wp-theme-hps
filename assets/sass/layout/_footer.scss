@@ -1,0 +1,147 @@
+#footer {
+  @include bordered;
+  text-align: center;
+
+  a {
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .footer-t {
+    background: #062555;
+    padding: 153px 0 184px;
+
+    @include media('<widescreen') {
+      padding: 80px 0;
+    }
+
+    @include media('<desktop') {
+      padding: 50px 0;
+    }
+
+    .three-columns {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include media('<tablet') {
+        display: block;
+      }
+
+      .column {
+        width: 33.33%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+
+        @include media('<tablet') {
+          display: flex;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        &:last-child {
+
+          @include media('<tablet') {
+            margin-bottom: 0;
+          }
+        }
+
+        .content-holder {
+          width: 100%;
+        }
+      }
+    }
+
+    .footer-nav {
+      @extend %listreset;
+      font: 300 15px/17px $base-font-sans-serif;
+
+      li {
+        margin-bottom: 14px;
+
+        a {
+          color: rgba($white, 0.7);
+
+          &:hover,
+          &:focus {
+            color: $saffron;
+          }
+        }
+      }
+    }
+
+    .logo-wrap {
+      width: 154px;
+      margin: 0 auto;
+
+      @include media('<tablet') {
+        width: 75px;
+      }
+
+      a {
+        display: block;
+        height: 100%;
+
+        @include media('<widescreen') {
+          max-width: 113px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    address {
+      margin: 0;
+      font-style: normal;
+      color: rgba($white, 0.7);
+      font: 300 15px/2.0909 $base-font-sans-serif;
+
+      span {
+        display: block;
+
+        a {
+          color: rgba($white, 0.7);
+
+          &:hover,
+          &:focus {
+            color: $saffron;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-b {
+    text-align: center;
+    padding: 14px 0;
+    background: $charade;
+    font: 300 15px/2.0909 $base-font-sans-serif;
+    color: rgba($white, 0.5);
+  }
+
+  .social-networks {
+    @extend %listreset;
+    letter-spacing: -4px;
+    padding-top: 4px;
+
+    li {
+      letter-spacing: 0;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px;
+
+      a {
+        color: #b5becc;
+        font-size: 22px;
+
+        &.icon-google-plus {
+          font-size: 19px;
+        }
+
+        &:hover{
+          color: $saffron;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.faq-block {
+  padding: 100px 0;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 50px 0 80px;
+  }
+
+  .accordion-block {
+    font-size: 22px;
+    line-height: 1.4545;
+
+    @include media('<desktop') {
+      font-size: 16px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+  }
+
+  h2 {
+    color: $abbey;
+  }
+
+  .accordion {
+    @extend %listreset;
+    font-weight: 700;
+
+    >li {
+
+      &:first-child {
+        border-top: 1px solid $anzac;
+      }
+
+      &.active {
+
+        .opener:before {
+          transform: rotate(90deg);
+        }
+      }
+
+      .opener {
+        display: block;
+        color: $abbey;
+        padding: 15px 40px 15px 0;
+        border-bottom: 1px solid $anzac;
+        position: relative;
+        text-decoration: none;
+
+        @include media('<tablet') {
+          padding-right: 20px;
+        }
+
+        &:before {
+          content: "\e908";
+          position: absolute;
+          right: 0;
+          top: 19px;
+          font: 22px/1 'icomoon';
+
+          @include media('<tablet') {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .accordion-content {
+    font-weight: normal;
+    padding: 30px 150px 30px 0;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid $anzac;
+
+    @include media('<desktop') {
+      padding: 20px 100px 20px 0;
+    }
+
+    @include media('<tablet') {
+      padding-right: 0;
+    }
+
+    p {
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .list, ul {
+      @extend %listreset;
+      margin-bottom: 32px;
+
+      li {
+        padding-left: 36px;
+        position: relative;
+
+        &:before {
+          @include vertical-align-y;
+          left: 0;
+          content: "";
+          background: $abbey;
+          width: 9px;
+          height: 1px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+.team-intro-block {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.4545;
+  letter-spacing: 0.2px;
+  padding-top: 102px;
+
+  @include media('<desktop') {
+    font-size: 20px;
+    padding-top: 50px;
+  }
+
+  @include media('<tablet') {
+    font-size: 16px;
+    padding-top: 30px;
+  }
+
+  h2 {
+    position: relative;
+    padding-bottom: 42px;
+    margin-bottom: 52px;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  .intro-holder {
+    padding: 0 88px;
+
+    @include media('<widescreen') {
+      padding: 0;
+    }
+  }
+}
+
+.team-section-holder {
+  margin-top: -61px;
+}
+
+.team-section {
+  padding: 137px 0 17px;
+  text-align: center;
+
+  @include media('<tablet') {
+    padding-top: 80px;
+  }
+
+  &:nth-child(even) {
+    background: $madison;
+    color: $white;
+  }
+
+  + .team-section {
+    @include bordered;
+  }
+
+  h3 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+
+    &:after {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  .row {
+    letter-spacing: -5px;
+  }
+
+  [class*="col-"] {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0;
+    margin-bottom: 17px;
+
+    @include media('<phone') {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  .img-wrap {
+    margin-bottom: 46px;
+
+    @include media('<desktop') {
+      margin-bottom: 30px;
+    }
+
+    @include media('<tablet') {
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content-holder {
+    padding: 0 4px 46px;
+
+    @include media('<desktop') {
+      padding: 0 4px 30px;
+    }
+
+    @include media('<tablet') {
+      padding: 0 4px 20px;
+    }
+  }
+
+  .name {
+    display: block;
+    text-transform: uppercase;
+    font: 700 22px/1.2727 $base-font-sans-serif;
+    position: relative;
+    padding-bottom: 17px;
+    margin-bottom: 12px;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+
+    &:before {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  .title {
+    display: block;
+    font-weight: 700;
+  }
+
+  .dept-sub-row {
+    margin-bottom: 28px;
+
+    @include media('<tablet') {
+      margin-bottom: 15px;
+    }
+  }
+
+  .member-row {
+
+    + .member-row {
+      margin-top: 80px;
+
+      @include media('<tablet') {
+        margin-top: 50px;
+      }
+    }
+  }
+}

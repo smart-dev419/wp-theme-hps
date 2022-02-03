@@ -1,0 +1,245 @@
+.tour-info-block {
+  background: $madison;
+  color: $white;
+  padding: 101px 0 88px;
+
+  @include media('<desktop') {
+    padding: 50px 0 40px;
+  }
+
+  .content-row {
+    margin-bottom: 69px;
+    font-size: 22px;
+    line-height: 1.4545;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  h2 {
+    color: $anzac;
+    padding-bottom: 34px;
+    margin-bottom: 45px;
+    position: relative;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      font-size: 26px;
+    }
+
+    &:before {
+      @include line;
+      transform: none;
+      left: 0;
+    }
+  }
+
+  .text-container {
+    column-count: 2;
+    column-gap: 50px;
+    color: $tana;
+
+    @include media('<desktop') {
+      column-count: 1;
+      column-gap: 0;
+    }
+
+    p {
+      display: table;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin: 0;
+      padding-bottom: 28px;
+    }
+  }
+
+  .date-list {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media('<phone') {
+      display: block;
+      margin: 0;
+    }
+
+    [class*="col"] {
+      border: solid $anzac;
+      border-width: 0 0 0 2px;
+      margin-bottom: 30px;
+      padding: 8px 0 26px;
+      width: 24.9%;
+
+      @include media('<phone') {
+        width: 100%;
+        border-width: 2px 0 0;
+        padding: 20px 0 0;
+        margin: 20px 0 0;
+      }
+
+      &:nth-child(4n+1) {
+
+        @include media('>=phone') {
+          border: none;
+        }
+      }
+
+      &:first-child {
+
+        @include media('<phone') {
+          border: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    .date {
+      font-weight: 700;
+      font-family: $base-font-sans-serif;
+      color: $tana;
+    }
+
+    .month {
+      display: block;
+      font-size: 35px;
+      line-height: 1;
+      text-transform: uppercase;
+
+      @include media('<widescreen') {
+        font-size: 30px;
+      }
+
+      @include media('<desktop') {
+        font-size: 22px;
+      }
+
+      @include media('<desktop') {
+        font-size: 16px;
+      }
+    }
+
+    .day {
+      display: block;
+      font-size: 69px;
+      line-height: 1;
+
+      @include media('<widescreen') {
+        font-size: 44px;
+      }
+
+      @include media('<desktop') {
+        font-size: 36px;
+      }
+
+      @include media('<tablet') {
+        font-size: 22px;
+      }
+    }
+
+    .year {
+      display: block;
+      font-size: 50px;
+      line-height: 1;
+
+      @include media('<widescreen') {
+        font-size: 38px;
+      }
+
+      @include media('<desktop') {
+        font-size: 30px;
+      }
+
+      @include media('<tablet') {
+        font-size: 24px;
+      }
+    }
+  }
+  a {
+    color: $tana;
+  }
+}
+
+.open-house-block {
+  @include bordered;
+  text-align: center;
+  padding: 82px 0 76px;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<desktop') {
+    padding: 50px 0 30px;
+    font-size: 20px;
+  }
+
+  @include media('<tablet') {
+    font-size: 16px;
+    padding: 30px 0 15px;
+  }
+
+  h2 {
+    color: $abbey;
+    padding-bottom: 47px;
+    margin-bottom: 45px;
+    position: relative;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  .frame {
+    padding: 0 34px;
+
+    @include media('<widescreen') {
+      padding: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 57px;
+
+    @include media('<desktop') {
+      margin-bottom: 30px;
+    }
+  }
+
+  ul {
+    @extend %listreset;
+    font-weight: 700;
+
+    li {
+      margin-bottom: 42px;
+
+      @include media('<desktop') {
+        margin-bottom: 25px;
+      }
+
+      @include media('<tablet') {
+        margin-bottom: 15px;
+      }
+    }
+
+    a {
+      color: $abbey;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

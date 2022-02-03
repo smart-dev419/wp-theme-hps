@@ -1,0 +1,44 @@
+.statement-intro-content {
+  padding: 102px 0 40px;
+
+  @include media('<desktop') {
+    padding: 50px 0 10px;
+  }
+
+  .top-block {
+
+    h2 {
+      color: $abbey;
+    }
+  }
+}
+
+.article-list {
+  counter-reset: div;
+  letter-spacing: -5px;
+  padding-top: 19px;
+
+  @include media('<tablet') {
+    padding-top: 0;
+  }
+
+  .list {
+    counter-increment: article;
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0;
+
+    @include media('<tablet') {
+      margin-bottom: 30px;
+    }
+
+    @include media('<phone') {
+      display: block;
+      width: 100%;
+    }
+  }
+}

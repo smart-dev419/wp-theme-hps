@@ -1,0 +1,95 @@
+.goal-list-block {
+  padding: 148px 0 0;
+
+  @include media('<desktop') {
+    padding-top: 50px;
+  }
+
+  @include media('<tablet') {
+    padding-top: 30px;
+  }
+
+  .heading-block {
+    position: relative;
+    padding-bottom: 22px;
+    margin-bottom: 23px;
+
+    &:before {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  .img-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: $abbey;
+    position: relative;
+    margin-bottom: 30px;
+
+    @include media('<desktop') {
+      margin-bottom: 20px;
+    }
+
+    .img-frame {
+      @include vertical-align-y;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  .goal-list {
+    font: 700 22px/1.4545 $base-font-sans-serif;
+    text-transform: uppercase;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+
+    .title {
+      display: block;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .text-holder {
+    padding: 0 33px;
+
+    @include media('<widescreen') {
+      padding: 0 20px;
+    }
+  }
+
+  .row {
+    letter-spacing: -5px;
+
+    [class*="col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      letter-spacing: 0;
+      margin-bottom: 107px;
+      text-align: center;
+
+      @include media('<desktop') {
+        margin-bottom: 50px;
+      }
+
+      @include media('<tablet') {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

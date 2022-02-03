@@ -1,0 +1,296 @@
+.fee-program  {
+  padding-top: 79px;
+  padding-bottom: 33px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<desktop') {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
+
+  @include media('<tablet') {
+    padding-bottom: 0;
+  }
+
+  .row {
+    letter-spacing: -5px;
+
+    [class*="col-"] {
+      letter-spacing: 0;
+      display: inline-block;
+      vertical-align: top;
+      font-style: normal;
+    }
+  }
+
+  @include media('<tablet') {
+    padding-top: 30px;
+    font-size: 16px;
+  }
+
+  .content-holder {
+    padding: 0 126px 30px;
+
+    @include media('<xl-widescreen') {
+      padding: 0 100px 30px;
+    }
+
+    @include media('<widescreen') {
+      padding: 0 50px 30px;
+    }
+
+    @include media('<desktop') {
+      padding: 0 0 0 30px;
+    }
+
+    @include media('<tablet') {
+      padding: 0 0 25px;
+    }
+  }
+
+  h2 {
+    color: $abbey;
+    padding-bottom: 45px;
+    margin-bottom: 41px;
+    position: relative;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+}
+
+.fee-structure-block {
+  @include bordered;
+  padding: 67px 0 147px;
+  background: $madison;
+  color: $white;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  h2 {
+    color: $anzac;
+    padding-bottom: 47px;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: center;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  .fee-structure-row {
+    @extend %listreset;
+    @extend %clearfix;
+    border-top: 1px solid $anzac;
+    font-size: 22px;
+    line-height: 1.4545;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+
+    li {
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $anzac;
+    }
+  }
+
+  .note {
+    display: block;
+    font-size: 22px;
+    line-height: 1.4545;
+    margin-top: 11px;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+  }
+}
+
+.payment-block {
+  @include bordered;
+  text-align: center;
+  padding: 101px 0 79px;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  .top-block {
+    margin-bottom: 17px;
+  }
+
+  h2 {
+    color: $abbey;
+    padding-bottom: 45px;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  h4 {
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 56px;
+
+    @include media('<tablet') {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  .payment-date-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+
+    @include media('<tablet') {
+      display: block;
+      margin: 0 0 40px;
+    }
+
+    [class*="col-"] {
+      border: solid $anzac;
+      border-width: 0 0 0 2px;
+      margin-bottom: 56px;
+      padding-top: 17px;
+      padding-bottom: 30px;
+      width: 33.2%;
+
+      @include media('<desktop') {
+        margin-bottom: 30px;
+      }
+
+      @include media('<tablet') {
+        padding:  0 0 20px;
+        margin-bottom: 20px;
+        border-width: 0 0 2px;
+        width: 100%;
+      }
+
+      &:first-child,
+      &:nth-child(3n+1) {
+
+        @include media('>=tablet') {
+          border: none;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .dates {
+      @extend %listreset;
+    }
+  }
+
+  .text-container {
+    font-size: 22px;
+    line-height: 1.4545;
+
+    @include media('<desktop') {
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      font-size: 16px;
+    }
+  }
+}
+
+.footer-info-block {
+  @include bordered;
+  background: $madison;
+  padding: 70px 0 82px;
+  font-size: 22px;
+  line-height: 1.4545;
+  color: $tana;
+  text-align: center;
+
+  @include media('<desktop') {
+    font-size: 20px;
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+    font-size: 16px;
+  }
+
+  h2 {
+    color: $anzac;
+    padding-bottom: 47px;
+    margin-bottom: 45px;
+    position: relative;
+    text-align: center;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  a {
+    color: $tana;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.highlight-block {
+  @include bordered;
+  background: $madison;
+  text-align: center;
+  color: $white;
+  padding: 110px 0 127px;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+    font-size: 20px;
+  }
+
+  @include media('<tablet') {
+    font-size: 16px;
+  }
+
+  h2 {
+    color: $anzac;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 37px;
+    margin-bottom: 40px;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 45px;
+    }
+
+    @include media('<desktop') {
+      padding-bottom: 25px;
+      margin-bottom: 35px;
+    }
+
+    &:after {
+      @include line;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.list-by-grade {
+  @include bordered;
+  padding: 104px 0;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+}
+
+.resources-panel {
+  @include bordered;
+  padding: 100px 0 133px;
+  text-align: center;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.4545;
+  background: $madison;
+  color: $white;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+    font-size: 16px;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+    line-height: 16px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 42px;
+    margin-bottom: 40px;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 45px;
+    }
+
+    @include media('<desktop') {
+      padding-bottom: 25px;
+      margin-bottom: 35px;
+    }
+
+    &:after {
+      @include line;
+    }
+  }
+
+  .heading {
+    padding: 0 60px;
+
+    @include media('<desktop') {
+      padding: 0 30px;
+    }
+
+    @include media('<tablet') {
+      padding: 0;
+    }
+  }
+
+  .text-container {
+
+    a {
+      color: $abbey;
+      font-weight: 700;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .learn-more-list {
+    @extend %listreset;
+    margin-top: 55px;
+
+    @include media('<desktop') {
+      margin-top: 30px;
+    }
+
+    li {
+
+      + li {
+        margin-top: 70px;
+
+        @include media('<desktop') {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

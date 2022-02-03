@@ -1,0 +1,90 @@
+.enrollment-documents-block {
+  padding: 110px 0 49px;
+
+  @include media('<desktop') {
+    padding: 50px 0 20px;
+  }
+}
+
+.document-list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  @include media('<tablet') {
+    display: block;
+    margin: 0;
+  }
+
+  h3 {
+    position: relative;
+    padding:  0 34px 30px;
+    margin-bottom: 34px;
+
+    @include media('<xl-widescreen') {
+      padding: 0 14px 30px;
+    }
+
+    @include media('<desktop') {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  [class*="col-"] {
+    border: solid $anzac;
+    border-width: 0 0 0 2px;
+    margin-bottom: 60px;
+
+    @include media('<tablet') {
+      border-width: 2px 0 0;
+      padding-top: 30px;
+      margin: 30px 0 0;
+    }
+
+    &:first-child {
+      border: none;
+
+      @include media('<tablet') {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      border: none;
+    }
+  }
+
+  .frame {
+    padding: 9px 20px 0;
+
+    @include media('<widescreen') {
+      padding: 9px 0 0;
+    }
+  }
+
+  .list {
+    @extend %listreset;
+    font-weight: 700;
+
+    li {
+      padding: 23px 0;
+      border-bottom: 2px solid $anzac;
+
+      @include media('<desktop') {
+        padding: 14px 0;
+      }
+
+      &:last-child {
+        @include media('<tablet') {
+          border: none;
+        }
+      }
+    }
+  }
+}

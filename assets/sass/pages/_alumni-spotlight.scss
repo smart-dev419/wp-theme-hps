@@ -1,0 +1,179 @@
+.spotlight-row {
+  display: flex;
+  @extend %clearfix;
+  background: $madison;
+  color: $white;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<xl-widescreen') {
+    font-size: 20px;
+  }
+
+  @include media('<desktop') {
+    display: block;
+    font-size: 16px;
+  }
+
+  &:nth-child(odd) {
+
+    .img-wrap {
+      order: 2;
+    }
+
+    .content-holder {
+      order: 1;
+
+      .content-frame {
+        float: right;
+        padding: 72px 132px 30px 0;
+
+        @include media('<desktop') {
+          float: none;
+        }
+      }
+    }
+  }
+
+  .img-wrap {
+    width: 50%;
+
+    @include media('<desktop') {
+      width: 100%;
+    }
+
+    .img-holder {
+      height: 100%;
+      padding-top: 100%;
+    }
+  }
+
+  .content-holder {
+    width: 50%;
+
+    @include media('<desktop') {
+      width: 100%;
+    }
+
+    .content-frame {
+      max-width: 720px;
+      float: left;
+      padding: 71px 10px 30px 132px;
+
+      @include media('<xl-widescreen') {
+        padding: 70px 30px 50px!important;
+        max-width: none;
+      }
+
+      @include media('<desktop') {
+        padding: 50px 20px 30px!important;
+      }
+    }
+
+    .header {
+      color: $anzac;
+      position: relative;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      position: relative;
+
+      &:before {
+        @include line;
+        transform: none;
+        left: 0;
+      }
+
+      h2 {
+        font-size: 32px;
+        color: $anzac;
+        margin-bottom: 0;
+
+        @include media('<desktop') {
+          font-size: 28px;
+        }
+
+        @include media('<tablet') {
+          font-size: 24px;
+        }
+      }
+
+      .heritage-class {
+        display: block;
+        font-size: 22px;
+        line-height: 1.4545;
+        font-style: italic;
+        letter-spacing: 0.4px;
+
+        @include media('<desktop') {
+          font-size: 20px;
+        }
+
+        @include media('<tablet') {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .spotlight-list {
+      @extend %listreset;
+      font-size: 14px;
+      line-height: 1.4285;
+
+      .title {
+        display: block;
+        color: $anzac;
+        font-weight: 700;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .enrichment-list {
+    @extend %listreset;
+    margin-bottom: 28px;
+
+    li {
+      padding-left: 20px;
+      position: relative;
+
+      &:before {
+        content: "";
+        background: $anzac;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+    }
+  }
+
+  .enrichment-sechedule-row {
+    margin-bottom: 64px;
+
+    @include media('<desktop') {
+      margin-bottom: 30px;
+    }
+
+    .title {
+      display: block;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.4545;
+      color: $anzac;
+      margin-bottom: 28px;
+
+      @include media('<desktop') {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 33px;
+  }
+}

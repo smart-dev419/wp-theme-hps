@@ -1,0 +1,193 @@
+.members-block {
+  padding: 100px 0;
+
+  @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  .top-block {
+    margin-bottom: 33px;
+
+    @include media('<desktop') {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: $abbey;
+    }
+  }
+
+  .logos-holder {
+    margin-bottom: 150px;
+
+    @include media('<desktop') {
+      margin-bottom: 50px;
+    }
+
+    ul {
+      @extend %listreset;
+      letter-spacing: -5px;
+      text-align: center;
+      margin: 0 -4px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        letter-spacing: 0;
+        display: inline-block;
+        vertical-align: middle;
+        width: 25%;
+        margin: 28px 0;
+        padding: 0 4px;
+
+        @include media('<desktop') {
+          width: 33.33%;
+          margin: 15px 0;
+        }
+
+        @include media('<phone') {
+          width: 50%;
+        }
+
+        a {
+          @include v-align;
+          display: block;
+          width: 100%;
+          height: 248px;
+          position: relative;
+          background: none;
+          padding: 20px;
+          text-decoration: none;
+
+          @include media('<tablet') {
+            height: 100%;
+            padding: 10px;
+          }
+
+          &:hover {
+            background: $anzac;
+          }
+        }
+      }
+    }
+
+    .logo-wrap {
+
+      img {
+
+        @include media('<tablet') {
+
+          &.logo-a-better-chance {
+            max-width: none;
+            width: 116px;
+          }
+
+          &.logo-acsi {
+            max-width: none;
+            width: 100px;
+          }
+
+          &.logo-accs {
+            max-width: none;
+            width: 70px;
+          }
+
+          &.logo-aaais {
+            max-width: none;
+            width: 100px;
+          }
+
+          &.logo-erb {
+            max-width: none;
+            width: 90px;
+          }
+
+          &.logo-gisa {
+            max-width: none;
+            width: 90px;
+          }
+
+          &.logo-jatp {
+            max-width: none;
+            width: 90px;
+          }
+
+          &.logo-njhc {
+            max-width: none;
+            width: 76px;
+          }
+
+          &.logo-ssat {
+            max-width: none;
+            width: 100px;
+          }
+
+          &.logo-sais {
+            max-width: none;
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.accreditation-block {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.4545;
+
+  @include media('<desktop') {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  @include media('<tablet') {
+    font-size: 16px;
+  }
+
+  h2 {
+    color: $abbey;
+    padding-bottom: 47px;
+    margin-bottom: 45px;
+    position: relative;
+
+    @include media('<desktop') {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      @include line;
+    }
+  }
+
+  p {
+    margin-bottom: 41px;
+
+    @include media('<desktop') {
+      margin-bottom: 25px;
+    }
+  }
+
+  .btn-wrap {
+    margin-bottom: 52px;
+
+    @include media('<desktop') {
+      margin-bottom: 25px;
+    }
+  }
+
+  .text-wrap {
+    padding: 0 55px;
+
+    @include media('<tablet') {
+      padding: 0;
+    }
+  }
+}

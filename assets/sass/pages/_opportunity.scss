@@ -1,0 +1,53 @@
+.opportunity-block {
+  padding: 102px 0 0;
+
+  @include media('<desktop') {
+    padding-top: 50px;
+  }
+
+  @include media('<tablet') {
+    padding-top: 30px;
+  }
+}
+
+.cols-wrapper {
+  @include bordered;
+  padding: 119px 0;
+
+   @include media('<desktop') {
+    padding: 50px 0;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0;
+  }
+
+  .row {
+    letter-spacing: -5px;
+  }
+
+  [class*="col-"] {
+    letter-spacing: 0;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include media('<tablet') {
+      margin-bottom: 30px;
+    }
+  }
+
+  h4 {
+    position: relative;
+    padding-bottom: 36px;
+    margin-bottom: 27px;
+    text-align: center;
+
+    &:before {
+      @include line;
+      width: 65px;
+    }
+  }
+}

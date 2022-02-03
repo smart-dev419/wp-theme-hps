@@ -1,0 +1,116 @@
+.job-opening-block {
+  @include bordered;
+  background: $madison;
+  color: $white;
+  padding: 113px 0 70px;
+
+  @include media('<desktop') {
+    padding: 50px 0 30px;
+  }
+
+  @include media('<tablet') {
+    padding: 30px 0 10px;
+  }
+
+  a {
+    color: $white;
+  }
+
+  h2 {
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 58px;
+
+    @include media('<desktop') {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    &:after {
+      @include line;
+    }
+  }
+
+  .job-opening-intro {
+    margin-bottom: 140px;
+    font-size: 22px;
+    line-height: 1.4545;
+    text-align: center;
+
+    @include media('<desktop') {
+      margin-bottom: 100px;
+      font-size: 20px;
+    }
+
+    @include media('<tablet') {
+      margin-bottom: 100px;
+      font-size: 16px;
+    }
+  }
+
+  .job-descriptions-wrap {
+    letter-spacing: -5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .job-item {
+      letter-spacing: 0;
+      margin-bottom: 70px;
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      @include media('>=widescreen') {
+        width: 33.33%;
+      }
+      @include media('>=tablet', '<widescreen') {
+        width: 50%;
+        margin-bottom: 50px;
+      }
+      @include media('<tablet') {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    .btn-wrap {
+      margin-top: 57px;
+
+      @include media('<desktop') {
+        margin-top: 30px;
+      }
+    }
+
+    .frame {
+      padding: 0 20px;
+
+      @include media('<desktop') {
+        padding: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 28px;
+    }
+  }
+
+  h4 {
+    position: relative;
+    padding-bottom: 34px;
+    margin-bottom: 27px;
+
+    @include media('<desktop') {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    &:before {
+      @include line;
+      width: 65px;
+    }
+  }
+
+  .fax-num {
+    font-weight: 700;
+  }
+}
